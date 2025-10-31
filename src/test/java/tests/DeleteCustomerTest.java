@@ -15,7 +15,6 @@ import java.util.List;
 public class DeleteCustomerTest extends BaseTest {
 
     @Story(value = "Тестирование вкладки Customers")
-    @Severity(value = SeverityLevel.NORMAL)
     @Test(description = "ID 3 Проверка удаления по среднеарифметическому количеству букв по полю First Name на вкладке Customers")
     public void deleteTest() {
         DeleteCustomerPage deleteCustomerPage = new DeleteCustomerPage(driver);

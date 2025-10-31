@@ -1,6 +1,8 @@
 package tests;
 
-import io.qameta.allure.*;
+import io.qameta.allure.Epic;
+import io.qameta.allure.Feature;
+import io.qameta.allure.Story;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import pages.SortingCustomersPage;
@@ -15,7 +17,6 @@ import java.util.List;
 public class SortingCustomersTest extends BaseTest {
 
     @Story(value = "Тестирование вкладки Customers")
-    @Severity(value = SeverityLevel.NORMAL)
     @Test(description = "ID 2 Проверка сортировки по полю First Name на вкладке Customers")
     public void sortingTest() {
 

@@ -30,7 +30,6 @@ public class AddCustomerTest extends BaseTest {
     }
 
     @Story(value = "Тестирование вкладки AddCustomer")
-    @Severity(value = SeverityLevel.NORMAL)
     @Test(description = "ID 2 Проверка отправки данных с заполненными полями формы на вкладке AddCustomer")
     public void testForm() {
         String postCodeValue = generatePostCode();
