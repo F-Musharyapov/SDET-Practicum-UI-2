@@ -1,6 +1,7 @@
 package tests;
 
 import config.BaseConfig;
+import io.github.bonigarcia.wdm.WebDriverManager;
 import org.aeonbits.owner.ConfigFactory;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -30,20 +31,14 @@ public class BaseTest {
      */
     @BeforeMethod
     public void setUp() {
+        WebDriverManager.chromedriver().setup();
 
-        System.setProperty(config.driverProperty(), config.driverPath());
-
-
-        // Создаем объект ChromeOptions и добавляем параметр
         ChromeOptions options = new ChromeOptions();
         options.addArguments("--ignore-certificate-errors");
         options.addArguments("--disable-gpu");
         options.addArguments("--no-sandbox");
-        // Игнорировать ошибки сертификатов
 
-        // Передаем options в ChromeDriver
         driver = new ChromeDriver(options);
-        //driver = new ChromeDriver();
 
         driver.get(config.url());
         driver.manage().window().maximize();
@@ -54,13 +49,10 @@ public class BaseTest {
     /**
      * Общие настройки для всех тестов, после выполнения каждого
      */
-    /*
     @AfterMethod
     public void tearDown() {
         if (driver != null) {
             driver.quit();
         }
     }
-
-     */
 }

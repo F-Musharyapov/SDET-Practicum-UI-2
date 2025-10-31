@@ -37,7 +37,6 @@ public class AddCustomerTest extends BaseTest {
 
         addCustomerPage
                 .clickToTabAddCustomer()
-                //.inputFirstName(firstNameValue)
                 .inputFirstName(generateFirstName(postCodeValue))
                 .inputLastName(generateLastName())
                 .inputPostCode(postCodeValue)
